@@ -1,3 +1,5 @@
+import Post from './Post';
+import Info from './Info';
 import { BodyAll, BodyContent, BodyMain, BodySide } from './Css.style';
 
 function Body () {
@@ -5,10 +7,11 @@ function Body () {
     <BodyAll>
       <BodyContent>
         <BodyMain>
-          Main here
+          <Post />
+          <Post />
         </BodyMain>
         <BodySide>
-          Side here
+          <Info />
         </BodySide>
       </BodyContent>
     </BodyAll>

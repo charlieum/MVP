@@ -53,13 +53,35 @@ export const BodyContent = styled.div`
 `
 
 export const BodyMain = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 3;
+  justify-content: flex-start;
+  align-items: center;
   border: 1px white solid;
 `
 
 export const BodySide = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  justify-content: flex-start;
+  align-items: center;
   border: 1px white solid;
+`
+
+export const PostAll = styled.div`
+  display: flex;
+  width: 95%;
+  padding: 5px;
+  border: 1px black solid;
+`
+
+export const InfoAll = styled.div`
+  display: flex;
+  width: 90%;
+  padding: 5px;
+  border: 1px black solid;
 `
 
 
