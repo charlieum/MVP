@@ -1,10 +1,11 @@
 import { SideContent } from './Css.style.js';
 
 function Post () {
+
   return (
     <>
       <SideContent>
-        POST!
+        <a href="/submit"> Createsss a Post </a>
       </SideContent>
       <SideContent>
         About this community !

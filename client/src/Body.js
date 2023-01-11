@@ -8,12 +8,14 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  Link,
 } from 'react-router-dom';
 
 import {
   BodyAll,
   BodyContent,
-  BodySide
+  BodySide,
+  SideContent,
 } from './Css.style';
 
 function Body () {

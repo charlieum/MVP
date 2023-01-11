@@ -3,7 +3,7 @@ import { HeaderBanner } from './Css.style';
 function Header () {
   return (
     <HeaderBanner>
-      Community Name Herex
+      <a href="/">Community Name Herex</a>
     </HeaderBanner>
   );
 }

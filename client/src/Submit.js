@@ -1,10 +1,10 @@
-import { BodyContent } from './Css.style.js';
+import { MainContent } from './Css.style.js';
 
 function Submit () {
   return (
-    <BodyContent>
+    <MainContent>
       Hey!
-    </BodyContent>
+    </MainContent>
   );
 }
 
