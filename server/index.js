@@ -5,16 +5,10 @@ const path = require("path");
 const controllers = require('./controllers.js');
 const app = express();
 
-const corsOptions = {
-  origin: 'http://localhost',
-  methods: ['get', 'post', 'put', 'patch'],
-  maxAge: '3600',
-};
-
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../client/public"))); //lead to index.html page
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get('/posts', controllers.getPosts);
 

@@ -2,6 +2,6 @@ const db = require('./db.js');
 
 module.exports = {
   getPosts: () => {
-    return db.Posts.find();
+    return db.Posts.find({});
   }
 }

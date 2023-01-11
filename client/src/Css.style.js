@@ -70,8 +70,9 @@ export const BodySide = styled.div`
   border: 1px white solid;
 `
 
-export const PostAll = styled.div`
+export const PostSingle = styled.div`
   display: flex;
+  flex-direction: column;
   width: 95%;
   padding: 5px;
   border: 1px black solid;

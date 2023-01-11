@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost:27017/mvp');
 const postsSchema = new mongoose.Schema ({
   user: {type: String, required: true},
   date: {type: Date, required: true},
-  title: {type: Date},
+  title: {type: String},
   body: {type: String, required: true},
 });
 
