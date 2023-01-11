@@ -1,6 +1,7 @@
 import { PostSingle } from './Css.style.js';
 
 function Post ({singlePost}) {
+  console.log(singlePost);
   return (
     <PostSingle>
       {singlePost.user}, {singlePost.data}
