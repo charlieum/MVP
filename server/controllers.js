@@ -14,11 +14,9 @@ module.exports = {
   getComments: (req, res) => {
     models.getComments(req.params.id)
       .then((response) => {
-        console.log('controller success > get Comments');
         res.status(200).send(response);
       })
       .catch((error) => {
-        onsole.log('controller error > get Comments');
         req.status(400).send('error');
       })
   }
