@@ -3,6 +3,7 @@ import Header from './Header';
 import Body from './Body';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Switch, Route, BrowserRouer } from 'react-router-dom';
 
 function App() {
   const [allPosts, setAllPosts] = useState([])
@@ -19,6 +20,12 @@ function App() {
 
   return (
     <div>
+      <BrowserRouer>
+        <Switch>
+          <Route path="/"></Route>
+        </Switch>
+      </BrowserRouer>
+
       <Navigation />
       <Header />
       <Body allPosts={allPosts} />
