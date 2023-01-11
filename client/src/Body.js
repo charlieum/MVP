@@ -1,30 +1,36 @@
-import Post from './Post';
+import Root from './Root';
 import Info from './Info';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { BodyAll, BodyContent, BodyMain, BodySide } from './Css.style';
+import Posts from './Posts';
+import Submit from './Submit';
+
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
+
+import {
+  BodyAll,
+  BodyContent,
+  BodySide
+} from './Css.style';
 
 function Body () {
-  const [allPosts, setAllPosts] = useState([]);
 
-  useEffect(() => {
-    axios.get('http://localhost:8080/posts')
-      .then((response) => {
-        setAllPosts(response.data);
-      })
-      .catch((error) => {
-        console.log('error');
-      })
-  }, []);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Root />}>
+        <Route index element={<Posts />} />
+        <Route path='/submit' element={<Submit />} />
+      </Route>
+    )
+  )
 
   return (
     <BodyAll>
       <BodyContent>
-        <BodyMain>
-          {allPosts.map((singlePost) => (
-            <Post singlePost={singlePost} />
-          ))}
-        </BodyMain>
+        <RouterProvider router={router}/>
         <BodySide>
           <Info />
         </BodySide>
@@ -34,3 +40,26 @@ function Body () {
 }
 
 export default Body;
+
+
+// import Info from './Info';
+// import Posts from './Posts';
+// import { BodyAll, BodyContent, BodyMain, BodySide } from './Css.style';
+
+// function Body () {
+
+//   return (
+//     <BodyAll>
+//       <BodyContent>
+//         <BodyMain>
+//           <Posts />
+//         </BodyMain>
+//         <BodySide>
+//           <Info />
+//         </BodySide>
+//       </BodyContent>
+//     </BodyAll>
+//   );
+// }
+
+// export default Body;

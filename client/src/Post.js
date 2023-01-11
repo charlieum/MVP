@@ -1,13 +1,13 @@
-import { PostSingle } from './Css.style.js';
+import { MainContent } from './Css.style.js';
 
 function Post ({singlePost}) {
   console.log(singlePost);
   return (
-    <PostSingle>
+    <MainContent>
       {singlePost.user}, {singlePost.data}
       <p>{singlePost.title}</p>
       <p>{singlePost.body}</p>
-    </PostSingle>
+    </MainContent>
   );
 }
 

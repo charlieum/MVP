@@ -1,10 +1,15 @@
-import { InfoAll } from './Css.style.js';
+import { SideContent } from './Css.style.js';
 
 function Post () {
   return (
-    <InfoAll>
-      Hey
-    </InfoAll>
+    <>
+      <SideContent>
+        POST!
+      </SideContent>
+      <SideContent>
+        About this community !
+      </SideContent>
+    </>
   );
 }
 

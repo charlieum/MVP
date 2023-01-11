@@ -49,7 +49,7 @@ export const BodyAll = styled.div`
 export const BodyContent = styled.div`
   display: flex;
   width: 80%;
-  border: 1px black solid;
+  border: 3px black solid;
 `
 
 export const BodyMain = styled.div`
@@ -70,7 +70,7 @@ export const BodySide = styled.div`
   border: 1px white solid;
 `
 
-export const PostSingle = styled.div`
+export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -78,7 +78,7 @@ export const PostSingle = styled.div`
   border: 1px black solid;
 `
 
-export const InfoAll = styled.div`
+export const SideContent = styled.div`
   display: flex;
   width: 90%;
   padding: 5px;
