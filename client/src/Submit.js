@@ -3,7 +3,7 @@ import { MainContent } from './Css.style.js';
 function Submit () {
   return (
     <MainContent>
-      Hey!
+      SUBMIT A POST HERE!
     </MainContent>
   );
 }

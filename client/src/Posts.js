@@ -5,20 +5,27 @@ import { useEffect, useState } from 'react';
 function Posts () {
   const [allPosts, setAllPosts] = useState([]);
 
+
   useEffect(() => {
     axios.get('http://localhost:8080/posts')
       .then((response) => {
-        setAllPosts(response.data);
+        const ordered = response.data.sort((a, b) => {
+          var dateA = new Date(a.data), dateB = new Date(b.data)
+	        return dateB - dateA
+        })
+        setAllPosts(ordered);
+        console.log(ordered);
       })
       .catch((error) => {
         console.log('error');
       })
   }, []);
+
   if (allPosts !== []) {
     return (
       <>
         {allPosts.map((singlePost) => (
-          <Post singlePost={singlePost} />
+          <Post singlePost={singlePost} key={singlePost._id} />
         ))}
       </>
     );

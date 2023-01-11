@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, "../client/public"))); //lead to ind
 app.use(cors());
 
 app.get('/posts', controllers.getPosts);
+app.get('/posts/:id', controllers.getComments);
 
 app.listen(8080);
 console.log(`Listening at http://localhost:8080`);

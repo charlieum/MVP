@@ -2,20 +2,19 @@ import Root from './Root';
 import Info from './Info';
 import Posts from './Posts';
 import Submit from './Submit';
+import Comments from './Comments';
 
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
-  Link,
 } from 'react-router-dom';
 
 import {
   BodyAll,
   BodyContent,
   BodySide,
-  SideContent,
 } from './Css.style';
 
 function Body () {
@@ -25,6 +24,7 @@ function Body () {
       <Route path='/' element={<Root />}>
         <Route index element={<Posts />} />
         <Route path='/submit' element={<Submit />} />
+        <Route path='/posts/:id' element={<Comments />} />
       </Route>
     )
   )

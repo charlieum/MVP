@@ -1,12 +1,12 @@
 import { MainContent } from './Css.style.js';
 
 function Post ({singlePost}) {
-  console.log(singlePost);
+  const postID = '/posts/' + singlePost._id;
+
   return (
     <MainContent>
-      {singlePost.user}, {singlePost.data}
-      <p>{singlePost.title}</p>
-      <p>{singlePost.body}</p>
+      <p><a href={postID}>{singlePost.title}</a></p>
+      <p>{singlePost.user}, {singlePost.data}</p>
     </MainContent>
   );
 }
