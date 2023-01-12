@@ -33,7 +33,7 @@ function Comments () {
       <>
         <MainContent>
           <div><TextTitle>{postData.title}</TextTitle></div>
-          <div><TextDetail>by <strong>{postData.user}</strong> posted on {postData.date}</TextDetail></div>
+          <div><TextDetail>by <strong>{postData.user}</strong> posted on {postData.date ? postData.date.slice(0,10) : postData.date}</TextDetail></div>
           <div>&nbsp;</div>
           <div>{postData.body}</div>
           <div>&nbsp;</div>
