@@ -34,6 +34,7 @@ export const NavAll = styled.div`
   width: 100%;
   color: #3D3D3D;
   padding: 10px;
+  background-color: #e2e2e2;
 `;
 
 export const NavItem = styled.div`
@@ -64,10 +65,18 @@ export const HeaderBanner = styled.div`
   background-color: #3D3D3D;
   font-family: 'BenchNine';
   font-size: 60px;
-  a:visited {
-    font-size: 60px;
-    color: #FFFFFF;
+  a:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
   }
+  a:visited {
+    color: #ffffff;
+  }
+  a:hover{
+    color: #eb008c;
+  }
+
 `
 export const BodyAll = styled.div`
   display: flex;
@@ -128,6 +137,8 @@ export const MainContent = styled.div`
 
 export const SideContent = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   padding: 15px;
   margin: 10px;
@@ -167,7 +178,7 @@ export const SubmitContainer = styled.div`
 
 export const SubmitButton = styled.button`
   padding: 10px 15px;
-  margin: 5px 0px;
+  margin: 10px 0px;
   border-radius: 12px;
   font-size: 12px;
   border: 0px;
@@ -175,8 +186,24 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
+export const Confirmed = styled.div`
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb008c;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 15px;
+  color: #FFFFFF;
+  height: 50px;
+  margin: 10px 0px 5px 0px;
+`;
+
 export const ReplyContainer = styled.div`
-  margin: 10px 0px 25px 0px;
+  margin: 10px 0px 15px 0px;
+  padding: 15px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
 `
 
 export default GlobalStyle;

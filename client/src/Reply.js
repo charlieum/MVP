@@ -7,7 +7,7 @@ function Post ({ postComment }) {
     <ReplyContainer>
       <div>{postComment.body}</div>
       <div>&nbsp;</div>
-      <div><TextDetail>by <strong>{postComment.user}</strong> posted on {postComment.date}</TextDetail></div>
+      <div><TextDetail>by <strong>{postComment.user}</strong> posted on {postComment.date.slice(0,10)}</TextDetail></div>
       <div><TextDetail>REPLY</TextDetail></div>
     </ReplyContainer>
     // </>

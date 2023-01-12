@@ -34,7 +34,7 @@ function Body () {
     <BodyAll>
       <BodyContent>
         <RouterProvider router={router}/>
-        <BodySpace />
+        <BodySpace></BodySpace>
         <BodySide>
           <Info />
         </BodySide>

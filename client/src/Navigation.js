@@ -5,7 +5,7 @@ function Navigation () {
   return (
     <NavAll>
       <NavItem>
-        ChuglyMonster
+        <strong>ChuglyMonster</strong>
       </NavItem>
       <NavItem>
         <NavButton>SIGN OUT</NavButton>

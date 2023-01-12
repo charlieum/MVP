@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 function Posts () {
   const [allPosts, setAllPosts] = useState([]);
 
-
   useEffect(() => {
     axios.get('http://localhost:8080/posts')
       .then((response) => {

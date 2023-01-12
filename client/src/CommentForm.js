@@ -16,6 +16,7 @@ function CommentForm ({ rootId, parentId }) {
     axios.post('http://localhost:8080/posts', commentContent)
       .then((response) => {
         setBody('');
+        window.location.reload();
       })
       .catch((error) => {
         console.log('error');

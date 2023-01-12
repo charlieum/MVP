@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { MainContent, TextTitle, SubmitButton } from './Css.style.js';
+import { MainContent, TextTitle, SubmitButton, Confirmed } from './Css.style.js';
 
 function Submit () {
   const [title, setTitle] = useState('');
@@ -17,11 +17,16 @@ function Submit () {
       .then(() => {
         setTitle('');
         setBody('');
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error);
       })
   };
+
+  useEffect(() => {
+    console.log('started');
+  }, [])
 
   return (
     <MainContent>
@@ -32,6 +37,7 @@ function Submit () {
       <div>&nbsp;</div>
       Content:
       <textarea placeholder='Write here... ' onChange={(e) => {setBody(e.target.value)}} value={body} />
+      <Confirmed>POSTED!</Confirmed>
       <SubmitButton onClick={submitPost}>Post</SubmitButton>
       <div>&nbsp;</div>
     </MainContent>
