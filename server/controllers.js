@@ -19,5 +19,18 @@ module.exports = {
       .catch((error) => {
         req.status(400).send('error');
       })
+  },
+
+  submitPost: (req, res) => {
+    console.log(req);
+    models.submitPost(req.body)
+      .then((response) => {
+        console.log('success controllers');
+        res.status(200).send(response);
+      })
+      .catch((error) => {
+        onsole.log('error controllers');
+        res.status(400).send('error');
+      })
   }
 }

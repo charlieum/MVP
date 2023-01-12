@@ -7,5 +7,16 @@ module.exports = {
 
   getComments: (id) => {
     return db.Posts.findById(id);
+  },
+
+  submitPost: (body) => {
+    console.log('in models');
+    const postContent = {
+      user: body.user,
+      date: new Date(),
+      title: body.title,
+      body: body.body,
+    }
+    return db.Posts.create(postContent);
   }
 }

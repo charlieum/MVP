@@ -23,7 +23,7 @@ function Comments () {
     return(
       <MainContent>
         <p>{postData.title}</p>
-        <p>{postData.user}, {postData.data}</p>
+        <p>{postData.user}, {postData.date}</p>
         <p>&nbsp;</p>
         <p>{postData.body}</p>
       </MainContent>

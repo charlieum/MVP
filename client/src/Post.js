@@ -6,7 +6,7 @@ function Post ({singlePost}) {
   return (
     <MainContent>
       <p><a href={postID}>{singlePost.title}</a></p>
-      <p>{singlePost.user}, {singlePost.data}</p>
+      <p>{singlePost.user}, {singlePost.date}</p>
     </MainContent>
   );
 }

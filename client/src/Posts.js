@@ -10,7 +10,7 @@ function Posts () {
     axios.get('http://localhost:8080/posts')
       .then((response) => {
         const ordered = response.data.sort((a, b) => {
-          var dateA = new Date(a.data), dateB = new Date(b.data)
+          var dateA = new Date(a.date), dateB = new Date(b.date)
 	        return dateB - dateA
         })
         setAllPosts(ordered);

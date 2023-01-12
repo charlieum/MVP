@@ -12,6 +12,7 @@ app.use(cors());
 
 app.get('/posts', controllers.getPosts);
 app.get('/posts/:id', controllers.getComments);
+app.post('/posts', controllers.submitPost);
 
 app.listen(8080);
 console.log(`Listening at http://localhost:8080`);
