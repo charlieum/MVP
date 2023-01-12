@@ -15,6 +15,7 @@ import {
   BodyAll,
   BodyContent,
   BodySide,
+  BodySpace,
 } from './Css.style';
 
 function Body () {
@@ -33,6 +34,7 @@ function Body () {
     <BodyAll>
       <BodyContent>
         <RouterProvider router={router}/>
+        <BodySpace />
         <BodySide>
           <Info />
         </BodySide>

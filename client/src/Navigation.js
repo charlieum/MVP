@@ -1,14 +1,14 @@
-import { NavAll, NavItem } from './Css.style';
+import { NavAll, NavItem, NavButton } from './Css.style';
 
 function Navigation () {
 
   return (
     <NavAll>
       <NavItem>
-        Ugly Chucky
+        ChuglyMonster
       </NavItem>
       <NavItem>
-        Sign Out
+        <NavButton>SIGN OUT</NavButton>
       </NavItem>
     </NavAll>
   );

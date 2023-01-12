@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { MainContent } from './Css.style.js';
+import { MainContent, TextTitle, SubmitButton } from './Css.style.js';
 
 function Submit () {
   const [title, setTitle] = useState('');
@@ -10,14 +10,13 @@ function Submit () {
     const postContent = {
       title: title,
       body: body,
-      user: 'Chuckles'
+      user: 'ChuglyMonster'
     }
-
-    console.log(postContent);
 
     axios.post('http://localhost:8080/posts', postContent)
       .then(() => {
-        console.log('COMPLETE!');
+        setTitle('');
+        setBody('');
       })
       .catch((error) => {
         console.log(error);
@@ -26,11 +25,15 @@ function Submit () {
 
   return (
     <MainContent>
+      <div><TextTitle>CREATE A POST</TextTitle></div>
+      <div>&nbsp;</div>
       Title:
-      <input placeholder='Title' onChange={(e) => {setTitle(e.target.value)}} />
+      <input placeholder='Title' onChange={(e) => {setTitle(e.target.value)}} value={title} />
+      <div>&nbsp;</div>
       Content:
-      <textarea placeholder='Write here... ' onChange={(e) => {setBody(e.target.value)}}/>
-      <button onClick={submitPost}>Post</button>
+      <textarea placeholder='Write here... ' onChange={(e) => {setBody(e.target.value)}} value={body} />
+      <SubmitButton onClick={submitPost}>Post</SubmitButton>
+      <div>&nbsp;</div>
     </MainContent>
   );
 }

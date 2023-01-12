@@ -1,12 +1,14 @@
-import { MainContent } from './Css.style.js';
+import { MainContent, TextDetail } from './Css.style.js';
 
 function Post ({singlePost}) {
   const postID = '/posts/' + singlePost._id;
 
   return (
     <MainContent>
-      <p><a href={postID}>{singlePost.title}</a></p>
-      <p>{singlePost.user}, {singlePost.date}</p>
+      <div><a href={postID}>{singlePost.title}</a></div>
+      <div><TextDetail>by <strong>{singlePost.user}</strong> posted on {singlePost.date}</TextDetail></div>
+      <div>&nbsp;</div>
+      <div><TextDetail>X COMMENTS &nbsp; | &nbsp; ADD COMMENT</TextDetail></div>
     </MainContent>
   );
 }

@@ -11,8 +11,8 @@ module.exports = {
       })
   },
 
-  getComments: (req, res) => {
-    models.getComments(req.params.id)
+  getPost: (req, res) => {
+    models.getPost(req.params.id)
       .then((response) => {
         res.status(200).send(response);
       })
@@ -21,15 +21,24 @@ module.exports = {
       })
   },
 
-  submitPost: (req, res) => {
-    console.log(req);
-    models.submitPost(req.body)
+  getPostComments: (req, res) => {
+    models.getPostComments(req.params.id)
       .then((response) => {
-        console.log('success controllers');
+        console.log('getPostComments success controller');
         res.status(200).send(response);
       })
       .catch((error) => {
-        console.log('error controllers');
+        console.log('getPostComments error controller');
+        res.status(400).send('error');
+      })
+  },
+
+  submitPost: (req, res) => {
+    models.submitPost(req.body)
+      .then((response) => {
+        res.status(200).send(response);
+      })
+      .catch((error) => {
         res.status(400).send('error');
       })
   }

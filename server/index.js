@@ -11,7 +11,8 @@ app.use(express.static(path.join(__dirname, "../client/public"))); //lead to ind
 app.use(cors());
 
 app.get('/posts', controllers.getPosts);
-app.get('/posts/:id', controllers.getComments);
+app.get('/posts/:id', controllers.getPost);
+app.get('/posts/comments/:id', controllers.getPostComments);
 app.post('/posts', controllers.submitPost);
 
 app.listen(8080);

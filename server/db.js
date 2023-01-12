@@ -7,6 +7,8 @@ const postsSchema = new mongoose.Schema ({
   date: {type: Date, required: true},
   title: {type: String},
   body: {type: String, required: true},
+  parentId: mongoose.ObjectId,
+  rootId: mongoose.ObjectId,
 });
 
 const Posts = mongoose.model('Posts', postsSchema);

@@ -14,7 +14,6 @@ function Posts () {
 	        return dateB - dateA
         })
         setAllPosts(ordered);
-        console.log(ordered);
       })
       .catch((error) => {
         console.log('error');
