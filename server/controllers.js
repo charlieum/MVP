@@ -29,7 +29,7 @@ module.exports = {
         res.status(200).send(response);
       })
       .catch((error) => {
-        onsole.log('error controllers');
+        console.log('error controllers');
         res.status(400).send('error');
       })
   }
