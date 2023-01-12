@@ -17,7 +17,7 @@ module.exports = {
         res.status(200).send(response);
       })
       .catch((error) => {
-        req.status(400).send('error');
+        res.status(400).send('error');
       })
   },
 
@@ -27,7 +27,20 @@ module.exports = {
         res.status(200).send(response);
       })
       .catch((error) => {
-        res.status(400).send('error');
+        res.status(400).send('error single');
+      })
+  },
+
+  getPostsComments: (req, res) => {
+    console.log('in controller');
+    models.getPostsComments()
+      .then((response) => {
+        console.log('success controller');
+        res.status(200).send(response);
+      })
+      .catch((error) => {
+        console.log('errror controller');
+        res.status(400).send('error here');
       })
   },
 

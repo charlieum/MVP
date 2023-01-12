@@ -52,6 +52,7 @@ export const NavButton = styled.button`
   border-radius: 12px;
   font-size: 12px;
   border: 0px;
+  background-color: #CDCDCD;
   cursor: pointer;
 `;
 

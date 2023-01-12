@@ -20,7 +20,7 @@ function Comments () {
             setPostComments(response.data);
           })
           .catch((error) => {
-            console.log('error in comments.js');
+            console.log('error');
           })
       })
       .catch((error) => {

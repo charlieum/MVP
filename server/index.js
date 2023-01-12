@@ -13,6 +13,7 @@ app.use(cors());
 app.get('/posts', controllers.getPosts);
 app.get('/posts/:id', controllers.getPost);
 app.get('/posts/comments/:id', controllers.getPostComments);
+app.get('/posts/all/comments', controllers.getPostsComments);
 app.post('/posts', controllers.submitPost);
 
 app.listen(8080);

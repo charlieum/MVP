@@ -13,6 +13,15 @@ function Posts () {
 	        return dateB - dateA
         })
         setAllPosts(ordered);
+
+        axios.get('http://localhost:8080/posts/all/comments')
+          .then((response) => {
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log('error in posts.js');
+          })
+
       })
       .catch((error) => {
         console.log('error');

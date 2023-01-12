@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { MainContent, TextTitle, SubmitButton, Confirmed } from './Css.style.js';
 
@@ -23,10 +23,6 @@ function Submit () {
         console.log(error);
       })
   };
-
-  useEffect(() => {
-    console.log('started');
-  }, [])
 
   return (
     <MainContent>

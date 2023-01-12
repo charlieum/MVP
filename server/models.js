@@ -13,6 +13,11 @@ module.exports = {
     return db.Posts.find({rootId:id});
   },
 
+  getPostsComments: () => {
+    console.log('in models');
+    return db.Posts.find({"rootId":{$ne:null}});
+  },
+
   submitPost: (body) => {
     const postContent = {
       user: body.user,
