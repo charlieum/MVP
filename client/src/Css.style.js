@@ -122,7 +122,8 @@ export const MainContent = styled.div`
   border-radius: 5px;
   a:link {
     font-size: 20px;
-}
+  }
+  /* border: 1px solid black; */
 `
 
 export const SideContent = styled.div`
@@ -160,9 +161,13 @@ export const PostButton = styled.button`
   color: #FFFFFF;
 `;
 
+export const SubmitContainer = styled.div`
+  margin: 5px 0px 0px 0px;
+`
+
 export const SubmitButton = styled.button`
   padding: 10px 15px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   border-radius: 12px;
   font-size: 12px;
   border: 0px;
@@ -170,5 +175,8 @@ export const SubmitButton = styled.button`
   cursor: pointer;
 `;
 
+export const ReplyContainer = styled.div`
+  margin: 10px 0px 25px 0px;
+`
 
 export default GlobalStyle;

@@ -10,7 +10,6 @@ module.exports = {
   },
 
   getPostComments: (id) => {
-    console.log('in models for getPostComments');
     return db.Posts.find({rootId:id});
   },
 

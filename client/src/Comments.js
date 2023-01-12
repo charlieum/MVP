@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CommentForm from './CommentForm';
+import CommentsReply from './CommentsReply';
 import { MainContent, TextTitle, TextDetail } from './Css.style.js'
 import { useParams } from "react-router-dom";
 
@@ -29,19 +30,24 @@ function Comments () {
 
   if(postData !== []) {
     return(
-      <MainContent>
-        <div><TextTitle>{postData.title}</TextTitle></div>
-        <div><TextDetail>by <strong>{postData.user}</strong> posted on {postData.date}</TextDetail></div>
-        <div>&nbsp;</div>
-        <div>{postData.body}</div>
-        <div>&nbsp;</div>
-        <div><TextDetail>X COMMENTS</TextDetail></div>
-        <div>&nbsp;</div>
-        <hr />
-        <CommentForm rootId={id} parentId={id} />
-        <div>&nbsp;</div>
-
-      </MainContent>
+      <>
+        <MainContent>
+          <div><TextTitle>{postData.title}</TextTitle></div>
+          <div><TextDetail>by <strong>{postData.user}</strong> posted on {postData.date}</TextDetail></div>
+          <div>&nbsp;</div>
+          <div>{postData.body}</div>
+          <div>&nbsp;</div>
+          <div><TextDetail>{postComments.length} COMMENTS</TextDetail></div>
+          <div>&nbsp;</div>
+          <hr />
+          <CommentForm rootId={id} parentId={id} />
+        </MainContent>
+        {postComments.length !== 0
+        ? <MainContent>
+          <CommentsReply postComments={postComments} />
+        </MainContent>
+        : <></>}
+      </>
     );
   }
 }

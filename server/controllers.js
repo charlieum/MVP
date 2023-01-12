@@ -24,11 +24,9 @@ module.exports = {
   getPostComments: (req, res) => {
     models.getPostComments(req.params.id)
       .then((response) => {
-        console.log('getPostComments success controller');
         res.status(200).send(response);
       })
       .catch((error) => {
-        console.log('getPostComments error controller');
         res.status(400).send('error');
       })
   },

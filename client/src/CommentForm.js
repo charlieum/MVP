@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { MainContent, SubmitButton } from './Css.style.js';
+import { SubmitContainer, SubmitButton } from './Css.style.js';
 
 function CommentForm ({ rootId, parentId }) {
   const [body, setBody] = useState('');
@@ -23,11 +23,14 @@ function CommentForm ({ rootId, parentId }) {
   }
 
   return (
-    <MainContent>
+    <>
+      <SubmitContainer>
+        &nbsp;
+      </SubmitContainer>
       Leave a comment:
       <textarea placeholder='Write here... ' onChange={(e) => {setBody(e.target.value)}} value={body} />
       <SubmitButton onClick={submitComment}>Comment</SubmitButton>
-    </MainContent>
+    </>
   );
 }
 
